@@ -5,11 +5,12 @@ namespace Script.Game.Client.Object
 {
     public class Player : MonoBehaviour
     {
-        [SerializeField] private Rigidbody2D rb;
+        private Rigidbody2D rb;
         public bool isLocalPlayer;
         private void Start()
         {
             rb = GetComponent<Rigidbody2D>();
+            rb.freezeRotation = true;
         }
 
         private void Update()
